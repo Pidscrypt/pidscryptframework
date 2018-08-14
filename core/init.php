@@ -3,15 +3,17 @@
     use Engine\Config;
     use Engine\Cookie;
     use Engine\Session;
-    
+
     session_start();
+
+    $sys = parse_ini_file("sys.ini",true);
 
     $GLOBALS["config"] = array(
         'mysql' => array(
-            "host" => "127.0.0.1",
-            "username" => "com_humaneafricamission",
-            "password" => "123@ham.dev",
-            "db" => "com_humaneafricamission"
+            "host" => $sys["Application"]['db_host'],
+            "username" => $sys["Application"]['db_user'],
+            "password" => $sys["Application"]['db_password'],
+            "db" => $sys["Application"]['db_name']
         ), 
         'remember' => array(
             "cookie_name" => "ham_hash",
