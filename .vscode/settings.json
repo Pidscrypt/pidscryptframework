@@ -1,0 +1,11 @@
+{"[git-commit]": {
+    "editor.rulers": [
+        72
+    ]
+},
+"editor.matchBrackets": true,
+"editor.links": true,
+"editor.snippetSuggestions": "inline",
+"files.autoSave": "afterDelay",
+"files.autoSaveDelay": 1000
+}
